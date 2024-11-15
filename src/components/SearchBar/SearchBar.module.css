@@ -1,0 +1,21 @@
+.header {
+    background-color: blue;
+    width: 1280px;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+    padding: 10px 10px;
+}
+
+.input {
+    background-color: white;
+    color: black;
+    width: 360px;
+    margin-right: 16px;
+    height: 32px;
+}
+
+.btn {
+    color: black;
+    border: 1px solid black;
+}

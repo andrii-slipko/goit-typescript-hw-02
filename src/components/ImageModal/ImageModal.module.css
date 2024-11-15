@@ -1,0 +1,14 @@
+.btn {
+    color: black;
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.img {
+    width: 580px;
+    height: 450px;
+}
+
+.modal {
+    width: 980px;
+}

@@ -1,0 +1,13 @@
+.photolist {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+.photoListItem {
+    width: 280px;
+    height: 200px;
+}
