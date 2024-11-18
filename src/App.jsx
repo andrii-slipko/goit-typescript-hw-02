@@ -20,6 +20,7 @@ const App = () => {
 
   const fetchImages = async (query, page) => {
     setLoading(true);
+    setError(null)
     try {
       const response = await fetch(
         `https://api.unsplash.com/search/photos?query=${query}&page=${page}&per_page=12&client_id=${ACCESS_KEY}`
