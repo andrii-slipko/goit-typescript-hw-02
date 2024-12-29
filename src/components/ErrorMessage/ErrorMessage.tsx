@@ -1,6 +1,10 @@
 import React from 'react';
 
-const ErrorMessage = ({ message }) => (
+interface ErrorMessageProps {
+  message: string;
+}
+
+const ErrorMessage: React.FC<ErrorMessageProps> = ({ message }) => (
   <div style={{ color: 'red', textAlign: 'center' }}>
     <p>{message}</p>
   </div>

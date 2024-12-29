@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
-import styles from './SearchBar.module.css'
+import styles from './SearchBar.module.css';
 
-const SearchBar = ({ onSubmit }) => {
-  const [query, setQuery] = useState('');
+interface SearchBarProps {
+  onSubmit: (query: string) => void;
+}
 
-  const handleSubmit = (e) => {
+const SearchBar: React.FC<SearchBarProps> = ({ onSubmit }) => {
+  const [query, setQuery] = useState<string>('');
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     if (!query.trim()) {
       toast.error('Please enter a search query');
@@ -17,7 +21,8 @@ const SearchBar = ({ onSubmit }) => {
   return (
     <header className={styles.header}>
       <form onSubmit={handleSubmit}>
-        <input className={styles.input}
+        <input
+          className={styles.input}
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -25,7 +30,9 @@ const SearchBar = ({ onSubmit }) => {
           autoComplete="off"
           autoFocus
         />
-        <button type="submit" className={styles.btn}>Search</button>
+        <button type="submit" className={styles.btn}>
+          Search
+        </button>
       </form>
     </header>
   );
